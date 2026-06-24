@@ -16,6 +16,8 @@ export function Header() {
         <a href="#services">Services</a>
         <a href="#treatments">Treatments</a>
         <a href="#locations">Locations</a>
+        <a href="#stylists">Stylists</a>
+        <a href="#gallery">Gallery</a>
         <a href="#booking">Booking</a>
       </nav>
 
