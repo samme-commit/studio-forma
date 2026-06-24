@@ -4,7 +4,11 @@ import { stylists } from "../../data/stylists";
 import { SectionHeader } from "../SectionHeader/SectionHeader";
 import "./Stylists.css";
 
-export function Stylists() {
+type StylistsProps = {
+  onBook: (stylist?: string) => void;
+};
+
+export function Stylists({ onBook }: StylistsProps) {
   return (
     <section className="section-block stylists-section" id="stylists">
       <SectionHeader
@@ -30,10 +34,10 @@ export function Stylists() {
               <h3>{stylist.name}</h3>
               <p>{stylist.speciality}</p>
 
-              <a href="#booking">
+              <button type="button" onClick={() => onBook(stylist.name)}>
                 Book with {stylist.name.split(" ")[0]}
                 <FontAwesomeIcon icon={faArrowRight} />
-              </a>
+              </button>
             </div>
           </article>
         ))}

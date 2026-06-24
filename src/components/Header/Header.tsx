@@ -2,7 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faScissors } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
-export function Header() {
+type HeaderProps = {
+  onBook: () => void;
+};
+
+export function Header({ onBook }: HeaderProps) {
   return (
     <header className="site-header">
       <a className="header-logo" href="#top" aria-label="Studio Forma home">
@@ -21,10 +25,10 @@ export function Header() {
         <a href="#booking">Booking</a>
       </nav>
 
-      <a className="header-cta" href="#booking">
+      <button className="header-cta" type="button" onClick={onBook}>
         <FontAwesomeIcon icon={faCalendarCheck} />
         Book time
-      </a>
+      </button>
     </header>
   );
 }

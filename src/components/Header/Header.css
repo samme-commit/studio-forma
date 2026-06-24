@@ -80,6 +80,11 @@
   box-shadow: 0 14px 34px rgba(17, 17, 17, 0.18);
 }
 
+button.header-cta {
+  border: 0;
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .header-nav {
     display: none;

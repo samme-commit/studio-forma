@@ -8,7 +8,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Hero.css";
 
-export function Hero() {
+type HeroProps = {
+  onBook: () => void;
+};
+
+export function Hero({ onBook }: HeroProps) {
   return (
     <section className="hero-section" id="top">
       <div className="hero-copy">
@@ -25,10 +29,10 @@ export function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a className="hero-primary" href="#booking">
+          <button className="hero-primary" type="button" onClick={onBook}>
             Book appointment
             <FontAwesomeIcon icon={faArrowRight} />
-          </a>
+          </button>
 
           <a className="hero-secondary" href="#services">
             View services

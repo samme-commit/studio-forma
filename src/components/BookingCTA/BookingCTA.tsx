@@ -2,7 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import "./BookingCTA.css";
 
-export function BookingCTA() {
+type BookingCTAProps = {
+  onBook: () => void;
+};
+
+export function BookingCTA({ onBook }: BookingCTAProps) {
   return (
     <section className="section-block booking-section" id="booking">
       <div className="booking-card">
@@ -17,11 +21,11 @@ export function BookingCTA() {
           </p>
         </div>
 
-        <a className="booking-button" href="mailto:samueloxenby@gmail.com">
+        <button className="booking-button" type="button" onClick={onBook}>
           <FontAwesomeIcon icon={faCalendarCheck} />
           Request appointment
           <FontAwesomeIcon icon={faArrowRight} />
-        </a>
+        </button>
       </div>
     </section>
   );

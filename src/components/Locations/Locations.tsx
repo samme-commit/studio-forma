@@ -8,7 +8,11 @@ import { locations } from "../../data/locations";
 import { SectionHeader } from "../SectionHeader/SectionHeader";
 import "./Locations.css";
 
-export function Locations() {
+type LocationsProps = {
+  onBook: () => void;
+};
+
+export function Locations({ onBook }: LocationsProps) {
   return (
     <section className="section-block locations-section" id="locations">
       <SectionHeader
@@ -40,10 +44,10 @@ export function Locations() {
                 </span>
               </div>
 
-              <a href="#booking">
+              <button type="button" onClick={onBook}>
                 Book here
                 <FontAwesomeIcon icon={faArrowRight} />
-              </a>
+              </button>
             </div>
           </article>
         ))}
