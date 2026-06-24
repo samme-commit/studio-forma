@@ -1,0 +1,122 @@
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.treatment-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(216, 167, 160, 0.22), transparent 16rem),
+    rgba(255, 250, 242, 0.58);
+  box-shadow:
+    0 22px 80px rgba(66, 47, 30, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.56);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.treatment-card::after {
+  content: "";
+  position: absolute;
+  right: -54px;
+  bottom: -58px;
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: rgba(176, 138, 87, 0.11);
+}
+
+.treatment-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(176, 138, 87, 0.34);
+  box-shadow:
+    0 32px 96px rgba(66, 47, 30, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.treatment-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.treatment-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.treatment-content span {
+  color: var(--brown);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.treatment-content h3 {
+  margin: 9px 0 0;
+  color: var(--dark);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.35rem;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.treatment-content p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.treatment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.treatment-meta strong {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.64);
+  color: var(--dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+@media (max-width: 820px) {
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .treatment-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    border-radius: 26px;
+  }
+
+  .treatment-content h3 {
+    font-size: 2rem;
+  }
+}

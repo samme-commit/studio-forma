@@ -13,6 +13,8 @@
 }
 
 #services,
+#treatments,
+#locations,
 #booking {
   scroll-margin-top: 110px;
 }

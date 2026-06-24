@@ -2,7 +2,9 @@ import { BookingCTA } from "./components/BookingCTA/BookingCTA";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
+import { Locations } from "./components/Locations/Locations";
 import { Services } from "./components/Services/Services";
+import { Treatments } from "./components/Treatments/Treatments";
 import "./App.css";
 
 export default function App() {
@@ -13,6 +15,8 @@ export default function App() {
       <div className="page-content">
         <Hero />
         <Services />
+        <Treatments />
+        <Locations />
         <BookingCTA />
       </div>
 
