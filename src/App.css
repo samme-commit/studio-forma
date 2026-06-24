@@ -1,0 +1,30 @@
+.site-shell {
+  min-height: 100vh;
+}
+
+.page-content {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 112px 0 86px;
+}
+
+.section-block {
+  padding: 86px 0;
+}
+
+#services,
+#booking {
+  scroll-margin-top: 110px;
+}
+
+@media (max-width: 720px) {
+  .page-content {
+    width: min(100% - 22px, 1180px);
+    padding-top: 96px;
+    padding-bottom: 64px;
+  }
+
+  .section-block {
+    padding: 58px 0;
+  }
+}

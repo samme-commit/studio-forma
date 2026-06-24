@@ -1,0 +1,26 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarCheck, faScissors } from "@fortawesome/free-solid-svg-icons";
+import "./Header.css";
+
+export function Header() {
+  return (
+    <header className="site-header">
+      <a className="header-logo" href="#top" aria-label="Studio Forma home">
+        <span>
+          <FontAwesomeIcon icon={faScissors} />
+        </span>
+        Studio Forma
+      </a>
+
+      <nav className="header-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#booking">Booking</a>
+      </nav>
+
+      <a className="header-cta" href="#booking">
+        <FontAwesomeIcon icon={faCalendarCheck} />
+        Book time
+      </a>
+    </header>
+  );
+}
